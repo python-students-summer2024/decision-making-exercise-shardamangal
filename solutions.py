@@ -27,6 +27,13 @@ def is_square():
       :returns: True if square (i.e. if equal length and height), False otherwise.
     """
     #### write your solution for this function below here. ####
+    length = float(input("Ender the length: "))
+    width = float(input("Ender the width: "))
+    if length == width:
+        return True
+    else:
+        False
+
 
 
 def get_greatest():
@@ -38,6 +45,13 @@ def get_greatest():
     :returns: the greatest of the two input numbers, as an int.
     """
     #### write your solution for this function below here. ####
+    x = int(input("Enter first number: "))
+    y = int(input("Enter second number: "))
+    if x>=y:
+        return(x)
+    else:
+        return(y)
+
 
 
 def get_bmi_category():
@@ -60,6 +74,25 @@ def get_bmi_category():
       :returns: The name of the BMI statistical category, based on the inputted height and weight.
     """
     #### write your solution for this function below here. ####
+    height = float(input("Enter your height: "))
+    weight = float(input("Enter your weight: "))
+    BMI = 703*weight/(height**2)
+    if BMI <15:
+        return("Very severely underweight")
+    elif BMI<16:
+        return("Severely underweight")
+    elif BMI<18.5:
+        return("Underweight")
+    elif BMI<25:
+        return("Normal")
+    elif BMI<30:
+        return("Overweight")
+    elif BMI<35:
+        return("Moderately obese")
+    elif BMI<40:
+        return("Severely underweight")
+    else:
+        return("Very severely obese")
 
 
 def get_discount():
@@ -72,6 +105,10 @@ def get_discount():
       :returns: The cost of the masks, after any discounts, e.g. "$4,000" for 1000 masks.
     """
     #### write your solution for this function below here. ####
+    masks = int(input("Enter the number of masks being purchased: "))
+    if masks>=5000:
+        cost = masks*5*0.8
+        return(f'{cost:,}')
 
 
 def is_leap_year():
@@ -85,3 +122,17 @@ def is_leap_year():
         get_year()
     )  # this line is given to you - the variable, year, holds the current year
     #### write your solution for this function below here. ####
+    year = (
+        get_year()
+    )  # this line is given to you - the variable, year, holds the current year
+    #### write your solution for this function below here. ####
+    if not year % 4 == 0:
+        return False
+    else:
+        if not year % 100 ==0:
+            return True
+        else:
+            if year % 400 == 0:
+                return True
+            else:
+                return False
